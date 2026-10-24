@@ -1,0 +1,41 @@
+.group {
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: var(--field);
+}
+
+.option {
+  min-height: 40px;
+  padding: 0.3rem 0.65rem;
+  border: 0;
+  border-radius: 1px;
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+
+.option:hover {
+  color: var(--ink);
+}
+
+.option[aria-pressed="true"] {
+  background: var(--ink);
+  color: var(--sheet);
+}
+
+.option[aria-pressed="true"]:hover {
+  color: var(--sheet);
+}
+
+@media (max-width: 420px) {
+  .option {
+    padding-inline: 0.5rem;
+    font-size: 0.72rem;
+  }
+}

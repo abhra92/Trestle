@@ -1,0 +1,33 @@
+.intro {
+  display: grid;
+  gap: 1.2rem;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+.title {
+  font-size: clamp(2.2rem, 1.3rem + 3.8vw, 4rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+  max-width: 15ch;
+}
+
+.introAside p {
+  max-width: 44ch;
+  color: var(--ink-soft);
+}
+
+.introNote {
+  margin-top: 0.9rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 900px) {
+  .intro {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.9fr);
+    align-items: end;
+    gap: clamp(2rem, 5vw, 4rem);
+  }
+}
