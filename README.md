@@ -37,15 +37,15 @@ POST /api/plan  (rate limit, body cap, content-type check, Zod validation)
    |        AI draft      local planner     |
    |             |           |              |
    +-------------+-----------+--------------+
-                 |
-                 v
-        Deterministic assembly
-        - validate and sanitise every model field
-        - drop unknown budget keys and vendor categories
-        - allocate the real budget, dates, and advice
-                 |
-                 v
-        Plan sheet, saved in this browser
+                  |
+                  v
+         Deterministic assembly
+         - validate and sanitise every model field
+         - drop unknown budget keys and vendor categories
+         - allocate the real budget, dates, and advice
+                  |
+                  v
+         Plan sheet, saved in this browser
 ```
 
 1. **Brief validation.** `lib/schema.ts` checks the event kind, date, guest count, budget, currency, location, setting, vibe, priorities, and notes. Priorities must belong to the chosen event type and cannot include the contingency line.
@@ -196,5 +196,3 @@ The suite covers:
 ## License
 
 MIT. See [LICENSE](./LICENSE).
-#   T r e s t l e  
- 
